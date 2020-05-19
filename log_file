@@ -1,0 +1,501 @@
+2020-05-15 19:37:11,569 - ISR.utils.train_helper - INFO - 
+Training details:
+2020-05-15 19:37:11,571 - ISR.utils.train_helper - INFO -   training_parameters: 
+2020-05-15 19:37:11,574 - ISR.utils.train_helper - INFO -     lr_train_dir: train/low
+2020-05-15 19:37:11,575 - ISR.utils.train_helper - INFO -     hr_train_dir: train/high
+2020-05-15 19:37:11,578 - ISR.utils.train_helper - INFO -     lr_valid_dir: test/low
+2020-05-15 19:37:11,580 - ISR.utils.train_helper - INFO -     hr_valid_dir: test/high
+2020-05-15 19:37:11,581 - ISR.utils.train_helper - INFO -     loss_weights: {'generator': 0.0, 'feature_extractor': 0.0833, 'discriminator': 0.01}
+2020-05-15 19:37:11,583 - ISR.utils.train_helper - INFO -     log_dirs: {'logs': './logs', 'weights': './weights'}
+2020-05-15 19:37:11,585 - ISR.utils.train_helper - INFO -     fallback_save_every_n_epochs: 2
+2020-05-15 19:37:11,586 - ISR.utils.train_helper - INFO -     dataname: image_dataset
+2020-05-15 19:37:11,587 - ISR.utils.train_helper - INFO -     n_validation: 40
+2020-05-15 19:37:11,589 - ISR.utils.train_helper - INFO -     flatness: {'min': 0.0, 'max': 0.15, 'increase': 0.01, 'increase_frequency': 5}
+2020-05-15 19:37:11,590 - ISR.utils.train_helper - INFO -     learning_rate: {'initial_value': 0.0004, 'decay_factor': 0.5, 'decay_frequency': 30}
+2020-05-15 19:37:11,591 - ISR.utils.train_helper - INFO -     adam_optimizer: {'beta1': 0.9, 'beta2': 0.999, 'epsilon': None}
+2020-05-15 19:37:11,593 - ISR.utils.train_helper - INFO -     losses: {'generator': 'mae', 'discriminator': 'binary_crossentropy', 'feature_extractor': 'mse'}
+2020-05-15 19:37:11,594 - ISR.utils.train_helper - INFO -     metrics: {'generator': <function PSNR_Y at 0x000001951F20A840>}
+2020-05-15 19:37:11,596 - ISR.utils.train_helper - INFO -     lr_patch_size: 40
+2020-05-15 19:37:11,597 - ISR.utils.train_helper - INFO -     steps_per_epoch: 500
+2020-05-15 19:37:11,598 - ISR.utils.train_helper - INFO -     batch_size: 16
+2020-05-15 19:37:11,600 - ISR.utils.train_helper - INFO -     starting_epoch: 0
+2020-05-15 19:37:11,601 - ISR.utils.train_helper - INFO -   generator: 
+2020-05-15 19:37:11,602 - ISR.utils.train_helper - INFO -     name: rrdn
+2020-05-15 19:37:11,604 - ISR.utils.train_helper - INFO -     parameters: {'C': 4, 'D': 3, 'G': 64, 'G0': 64, 'T': 10, 'x': 2}
+2020-05-15 19:37:11,605 - ISR.utils.train_helper - INFO -     weights_generator: None
+2020-05-15 19:37:11,606 - ISR.utils.train_helper - INFO -   discriminator: 
+2020-05-15 19:37:11,608 - ISR.utils.train_helper - INFO -     name: srgan-large
+2020-05-15 19:37:11,609 - ISR.utils.train_helper - INFO -     weights_discriminator: None
+2020-05-15 19:37:11,610 - ISR.utils.train_helper - INFO -   feature_extractor: 
+2020-05-15 19:37:11,612 - ISR.utils.train_helper - INFO -     name: vgg19
+2020-05-15 19:37:11,613 - ISR.utils.train_helper - INFO -     layers: [5, 9]
+2020-05-15 19:37:22,394 - ISR.train.trainer - INFO - Epoch 0/15
+2020-05-15 19:37:22,400 - ISR.train.trainer - INFO - Current learning rate: 0.00039999998989515007
+2020-05-15 19:37:54,610 - ISR.train.trainer - DEBUG - Losses at step 0:
+ {'train_d_real_loss': 0.950015, 'train_d_real_accuracy': 0.3153125, 'train_d_fake_loss': 0.7329602, 'train_d_fake_accuracy': 0.5807812, 'train_loss': 2.827463, 'train_generator_loss': 0.43301818, 'train_discriminator_loss': 0.65161157, 'train_feature_extractor_loss': 9.853428, 'train_feature_extractor_1_loss': 57.87639, 'train_generator_PSNR_Y': 8.192607}
+2020-05-15 19:38:26,052 - ISR.train.trainer - DEBUG - Losses at step 1:
+ {'train_d_real_loss': 0.7701317, 'train_d_real_accuracy': 0.4975, 'train_d_fake_loss': 0.75461435, 'train_d_fake_accuracy': 0.5103125, 'train_loss': 1.419223, 'train_generator_loss': 0.4309219, 'train_discriminator_loss': 0.62087303, 'train_feature_extractor_loss': 5.1831303, 'train_feature_extractor_1_loss': 28.742783, 'train_generator_PSNR_Y': 6.9652596}
+2020-05-15 19:38:57,612 - ISR.train.trainer - DEBUG - Losses at step 2:
+ {'train_d_real_loss': 0.7092058, 'train_d_real_accuracy': 0.5335938, 'train_d_fake_loss': 0.65392953, 'train_d_fake_accuracy': 0.6379688, 'train_loss': 0.8754995, 'train_generator_loss': 0.5382135, 'train_discriminator_loss': 0.58155936, 'train_feature_extractor_loss': 3.0791683, 'train_feature_extractor_1_loss': 17.801598, 'train_generator_PSNR_Y': 7.0139656}
+2020-05-15 19:39:44,989 - ISR.utils.train_helper - INFO - 
+Training details:
+2020-05-15 19:39:44,993 - ISR.utils.train_helper - INFO -   training_parameters: 
+2020-05-15 19:39:44,995 - ISR.utils.train_helper - INFO -     lr_train_dir: train/low
+2020-05-15 19:39:44,997 - ISR.utils.train_helper - INFO -     hr_train_dir: train/high
+2020-05-15 19:39:44,999 - ISR.utils.train_helper - INFO -     lr_valid_dir: test/low
+2020-05-15 19:39:45,001 - ISR.utils.train_helper - INFO -     hr_valid_dir: test/high
+2020-05-15 19:39:45,002 - ISR.utils.train_helper - INFO -     loss_weights: {'generator': 0.0, 'feature_extractor': 0.0833, 'discriminator': 0.01}
+2020-05-15 19:39:45,004 - ISR.utils.train_helper - INFO -     log_dirs: {'logs': './logs', 'weights': './weights'}
+2020-05-15 19:39:45,005 - ISR.utils.train_helper - INFO -     fallback_save_every_n_epochs: 2
+2020-05-15 19:39:45,006 - ISR.utils.train_helper - INFO -     dataname: image_dataset
+2020-05-15 19:39:45,008 - ISR.utils.train_helper - INFO -     n_validation: 40
+2020-05-15 19:39:45,009 - ISR.utils.train_helper - INFO -     flatness: {'min': 0.0, 'max': 0.15, 'increase': 0.01, 'increase_frequency': 5}
+2020-05-15 19:39:45,010 - ISR.utils.train_helper - INFO -     learning_rate: {'initial_value': 0.0004, 'decay_factor': 0.5, 'decay_frequency': 30}
+2020-05-15 19:39:45,012 - ISR.utils.train_helper - INFO -     adam_optimizer: {'beta1': 0.9, 'beta2': 0.999, 'epsilon': None}
+2020-05-15 19:39:45,013 - ISR.utils.train_helper - INFO -     losses: {'generator': 'mae', 'discriminator': 'binary_crossentropy', 'feature_extractor': 'mse'}
+2020-05-15 19:39:45,015 - ISR.utils.train_helper - INFO -     metrics: {'generator': <function PSNR_Y at 0x0000024E87078840>}
+2020-05-15 19:39:45,016 - ISR.utils.train_helper - INFO -     lr_patch_size: 40
+2020-05-15 19:39:45,017 - ISR.utils.train_helper - INFO -     steps_per_epoch: 100
+2020-05-15 19:39:45,019 - ISR.utils.train_helper - INFO -     batch_size: 16
+2020-05-15 19:39:45,020 - ISR.utils.train_helper - INFO -     starting_epoch: 0
+2020-05-15 19:39:45,021 - ISR.utils.train_helper - INFO -   generator: 
+2020-05-15 19:39:45,023 - ISR.utils.train_helper - INFO -     name: rrdn
+2020-05-15 19:39:45,024 - ISR.utils.train_helper - INFO -     parameters: {'C': 4, 'D': 3, 'G': 64, 'G0': 64, 'T': 10, 'x': 2}
+2020-05-15 19:39:45,025 - ISR.utils.train_helper - INFO -     weights_generator: None
+2020-05-15 19:39:45,027 - ISR.utils.train_helper - INFO -   discriminator: 
+2020-05-15 19:39:45,028 - ISR.utils.train_helper - INFO -     name: srgan-large
+2020-05-15 19:39:45,029 - ISR.utils.train_helper - INFO -     weights_discriminator: None
+2020-05-15 19:39:45,030 - ISR.utils.train_helper - INFO -   feature_extractor: 
+2020-05-15 19:39:45,032 - ISR.utils.train_helper - INFO -     name: vgg19
+2020-05-15 19:39:45,033 - ISR.utils.train_helper - INFO -     layers: [5, 9]
+2020-05-15 19:39:55,936 - ISR.train.trainer - INFO - Epoch 0/15
+2020-05-15 19:39:55,942 - ISR.train.trainer - INFO - Current learning rate: 0.00039999998989515007
+2020-05-15 19:40:27,628 - ISR.train.trainer - DEBUG - Losses at step 0:
+ {'train_d_real_loss': 0.51875776, 'train_d_real_accuracy': 0.8553125, 'train_d_fake_loss': 1.306937, 'train_d_fake_accuracy': 0.1828125, 'train_loss': 0.5702826, 'train_generator_loss': 0.5938145, 'train_discriminator_loss': 0.6672909, 'train_feature_extractor_loss': 2.0844443, 'train_feature_extractor_1_loss': 11.4476, 'train_generator_PSNR_Y': 6.3155847}
+2020-05-15 19:40:59,008 - ISR.train.trainer - DEBUG - Losses at step 1:
+ {'train_d_real_loss': 0.41856384, 'train_d_real_accuracy': 0.8595312, 'train_d_fake_loss': 1.6683997, 'train_d_fake_accuracy': 0.12359375, 'train_loss': 1.2845573, 'train_generator_loss': 0.26984215, 'train_discriminator_loss': 0.6221224, 'train_feature_extractor_loss': 4.3924108, 'train_feature_extractor_1_loss': 26.299932, 'train_generator_PSNR_Y': 10.331352}
+2020-05-15 19:41:30,512 - ISR.train.trainer - DEBUG - Losses at step 2:
+ {'train_d_real_loss': 0.4432068, 'train_d_real_accuracy': 0.84875, 'train_d_fake_loss': 1.0367686, 'train_d_fake_accuracy': 0.18921874, 'train_loss': 0.916933, 'train_generator_loss': 0.20249297, 'train_discriminator_loss': 0.6646121, 'train_feature_extractor_loss': 2.9739318, 'train_feature_extractor_1_loss': 18.881695, 'train_generator_PSNR_Y': 13.519371}
+2020-05-15 19:45:18,527 - ISR.utils.train_helper - INFO - 
+Training details:
+2020-05-15 19:45:18,530 - ISR.utils.train_helper - INFO -   training_parameters: 
+2020-05-15 19:45:18,532 - ISR.utils.train_helper - INFO -     lr_train_dir: train/low
+2020-05-15 19:45:18,534 - ISR.utils.train_helper - INFO -     hr_train_dir: train/high
+2020-05-15 19:45:18,536 - ISR.utils.train_helper - INFO -     lr_valid_dir: test/low
+2020-05-15 19:45:18,538 - ISR.utils.train_helper - INFO -     hr_valid_dir: test/high
+2020-05-15 19:45:18,540 - ISR.utils.train_helper - INFO -     loss_weights: {'generator': 0.0, 'feature_extractor': 0.0833, 'discriminator': 0.01}
+2020-05-15 19:45:18,541 - ISR.utils.train_helper - INFO -     log_dirs: {'logs': './logs', 'weights': './weights'}
+2020-05-15 19:45:18,543 - ISR.utils.train_helper - INFO -     fallback_save_every_n_epochs: 2
+2020-05-15 19:45:18,545 - ISR.utils.train_helper - INFO -     dataname: image_dataset
+2020-05-15 19:45:18,546 - ISR.utils.train_helper - INFO -     n_validation: 40
+2020-05-15 19:45:18,548 - ISR.utils.train_helper - INFO -     flatness: {'min': 0.0, 'max': 0.15, 'increase': 0.01, 'increase_frequency': 5}
+2020-05-15 19:45:18,550 - ISR.utils.train_helper - INFO -     learning_rate: {'initial_value': 0.0004, 'decay_factor': 0.5, 'decay_frequency': 30}
+2020-05-15 19:45:18,551 - ISR.utils.train_helper - INFO -     adam_optimizer: {'beta1': 0.9, 'beta2': 0.999, 'epsilon': None}
+2020-05-15 19:45:18,553 - ISR.utils.train_helper - INFO -     losses: {'generator': 'mae', 'discriminator': 'binary_crossentropy', 'feature_extractor': 'mse'}
+2020-05-15 19:45:18,554 - ISR.utils.train_helper - INFO -     metrics: {'generator': <function PSNR_Y at 0x0000022D65D07840>}
+2020-05-15 19:45:18,556 - ISR.utils.train_helper - INFO -     lr_patch_size: 40
+2020-05-15 19:45:18,557 - ISR.utils.train_helper - INFO -     steps_per_epoch: 10
+2020-05-15 19:45:18,559 - ISR.utils.train_helper - INFO -     batch_size: 16
+2020-05-15 19:45:18,560 - ISR.utils.train_helper - INFO -     starting_epoch: 0
+2020-05-15 19:45:18,562 - ISR.utils.train_helper - INFO -   generator: 
+2020-05-15 19:45:18,564 - ISR.utils.train_helper - INFO -     name: rrdn
+2020-05-15 19:45:18,565 - ISR.utils.train_helper - INFO -     parameters: {'C': 4, 'D': 3, 'G': 64, 'G0': 64, 'T': 10, 'x': 2}
+2020-05-15 19:45:18,566 - ISR.utils.train_helper - INFO -     weights_generator: None
+2020-05-15 19:45:18,568 - ISR.utils.train_helper - INFO -   discriminator: 
+2020-05-15 19:45:18,570 - ISR.utils.train_helper - INFO -     name: srgan-large
+2020-05-15 19:45:18,571 - ISR.utils.train_helper - INFO -     weights_discriminator: None
+2020-05-15 19:45:18,573 - ISR.utils.train_helper - INFO -   feature_extractor: 
+2020-05-15 19:45:18,574 - ISR.utils.train_helper - INFO -     name: vgg19
+2020-05-15 19:45:18,576 - ISR.utils.train_helper - INFO -     layers: [5, 9]
+2020-05-15 19:45:29,472 - ISR.train.trainer - INFO - Epoch 0/15
+2020-05-15 19:45:29,478 - ISR.train.trainer - INFO - Current learning rate: 0.00039999998989515007
+2020-05-15 19:46:01,009 - ISR.train.trainer - DEBUG - Losses at step 0:
+ {'train_d_real_loss': 0.53000414, 'train_d_real_accuracy': 0.7903125, 'train_d_fake_loss': 1.4271188, 'train_d_fake_accuracy': 0.26453125, 'train_loss': 0.7700988, 'train_generator_loss': 0.23547524, 'train_discriminator_loss': 0.57223696, 'train_feature_extractor_loss': 2.7329566, 'train_feature_extractor_1_loss': 15.619419, 'train_generator_PSNR_Y': 9.964365}
+2020-05-15 19:46:32,232 - ISR.train.trainer - DEBUG - Losses at step 1:
+ {'train_d_real_loss': 0.47422683, 'train_d_real_accuracy': 0.745, 'train_d_fake_loss': 1.2051963, 'train_d_fake_accuracy': 0.1784375, 'train_loss': 1.0549115, 'train_generator_loss': 0.7689399, 'train_discriminator_loss': 0.42754883, 'train_feature_extractor_loss': 3.8638842, 'train_feature_extractor_1_loss': 21.36147, 'train_generator_PSNR_Y': 3.5039673}
+2020-05-15 19:47:03,555 - ISR.train.trainer - DEBUG - Losses at step 2:
+ {'train_d_real_loss': 0.62067264, 'train_d_real_accuracy': 0.678125, 'train_d_fake_loss': 1.0769095, 'train_d_fake_accuracy': 0.27828124, 'train_loss': 0.46877232, 'train_generator_loss': 0.21439028, 'train_discriminator_loss': 0.5773722, 'train_feature_extractor_loss': 1.758408, 'train_feature_extractor_1_loss': 9.358005, 'train_generator_PSNR_Y': 12.806985}
+2020-05-15 19:47:34,929 - ISR.train.trainer - DEBUG - Losses at step 3:
+ {'train_d_real_loss': 0.4036687, 'train_d_real_accuracy': 0.81328124, 'train_d_fake_loss': 0.6423365, 'train_d_fake_accuracy': 0.5790625, 'train_loss': 1.5536157, 'train_generator_loss': 0.45981804, 'train_discriminator_loss': 0.9615258, 'train_feature_extractor_loss': 5.645605, 'train_feature_extractor_1_loss': 31.425234, 'train_generator_PSNR_Y': 6.6284018}
+2020-05-15 19:48:06,350 - ISR.train.trainer - DEBUG - Losses at step 4:
+ {'train_d_real_loss': 0.6201822, 'train_d_real_accuracy': 0.6671875, 'train_d_fake_loss': 0.62072825, 'train_d_fake_accuracy': 0.584375, 'train_loss': 0.5391226, 'train_generator_loss': 0.40248215, 'train_discriminator_loss': 0.6455479, 'train_feature_extractor_loss': 1.5939169, 'train_feature_extractor_1_loss': 11.1952095, 'train_generator_PSNR_Y': 8.179851}
+2020-05-15 19:48:37,698 - ISR.train.trainer - DEBUG - Losses at step 5:
+ {'train_d_real_loss': 0.28958198, 'train_d_real_accuracy': 0.899375, 'train_d_fake_loss': 0.5419121, 'train_d_fake_accuracy': 0.55671877, 'train_loss': 0.90312225, 'train_generator_loss': 0.58697563, 'train_discriminator_loss': 1.0916262, 'train_feature_extractor_loss': 3.3090258, 'train_feature_extractor_1_loss': 18.112486, 'train_generator_PSNR_Y': 5.814488}
+2020-05-15 19:49:09,257 - ISR.train.trainer - DEBUG - Losses at step 6:
+ {'train_d_real_loss': 0.14843425, 'train_d_real_accuracy': 0.99171877, 'train_d_fake_loss': 0.26709792, 'train_d_fake_accuracy': 0.97078127, 'train_loss': 0.6497665, 'train_generator_loss': 0.44000366, 'train_discriminator_loss': 0.66546273, 'train_feature_extractor_loss': 2.0156481, 'train_feature_extractor_1_loss': 13.425213, 'train_generator_PSNR_Y': 7.904341}
+2020-05-15 19:49:40,892 - ISR.train.trainer - DEBUG - Losses at step 7:
+ {'train_d_real_loss': 0.19114666, 'train_d_real_accuracy': 0.95890623, 'train_d_fake_loss': 0.14279082, 'train_d_fake_accuracy': 0.9990625, 'train_loss': 1.7308903, 'train_generator_loss': 0.46306497, 'train_discriminator_loss': 0.28555322, 'train_feature_extractor_loss': 6.086587, 'train_feature_extractor_1_loss': 35.402843, 'train_generator_PSNR_Y': 6.887104}
+2020-05-15 19:50:13,666 - ISR.train.trainer - DEBUG - Losses at step 8:
+ {'train_d_real_loss': 0.13527629, 'train_d_real_accuracy': 0.98859376, 'train_d_fake_loss': 0.0843445, 'train_d_fake_accuracy': 1.0, 'train_loss': 0.43281674, 'train_generator_loss': 0.34356856, 'train_discriminator_loss': 0.1136293, 'train_feature_extractor_loss': 1.6788946, 'train_feature_extractor_1_loss': 8.685581, 'train_generator_PSNR_Y': 9.385118}
+2020-05-15 19:50:45,584 - ISR.train.trainer - DEBUG - Losses at step 9:
+ {'train_d_real_loss': 0.0732617, 'train_d_real_accuracy': 1.0, 'train_d_fake_loss': 0.051655587, 'train_d_fake_accuracy': 1.0, 'train_loss': 0.5713387, 'train_generator_loss': 0.63875085, 'train_discriminator_loss': 0.09906768, 'train_feature_extractor_loss': 2.0613325, 'train_feature_extractor_1_loss': 11.632498, 'train_generator_PSNR_Y': 4.6744227}
+2020-05-15 19:50:45,586 - ISR.train.trainer - INFO - Epoch 0 took      316.1s
+2020-05-15 19:53:51,992 - ISR.train.trainer - ERROR - val_PSNR_Y is NOT among the model metrics, removing it.
+2020-05-15 19:53:51,995 - ISR.utils.train_helper - INFO - {'val_loss': 0.9849445016123355, 'val_generator_loss': 0.4662106, 'val_discriminator_loss': 0.10276929, 'val_feature_extractor_loss': 3.5017438, 'val_feature_extractor_1_loss': 20.12171, 'val_generator_PSNR_Y': 7.76997, 'train_d_real_loss': 0.0732617, 'train_d_real_accuracy': 1.0, 'train_d_fake_loss': 0.051655587, 'train_d_fake_accuracy': 1.0, 'train_loss': 0.5713387, 'train_generator_loss': 0.63875085, 'train_discriminator_loss': 0.09906768, 'train_feature_extractor_loss': 2.0613325, 'train_feature_extractor_1_loss': 11.632498, 'train_generator_PSNR_Y': 4.6744227}
+2020-05-15 19:53:52,004 - ISR.train.trainer - INFO - Epoch 1/15
+2020-05-15 19:53:52,006 - ISR.train.trainer - INFO - Current learning rate: 0.00039999998989515007
+2020-05-15 19:54:26,406 - ISR.train.trainer - DEBUG - Losses at step 0:
+ {'train_d_real_loss': 0.16195397, 'train_d_real_accuracy': 0.9978125, 'train_d_fake_loss': 0.1839635, 'train_d_fake_accuracy': 0.97875, 'train_loss': 0.8032393, 'train_generator_loss': 0.46081197, 'train_discriminator_loss': 0.10225366, 'train_feature_extractor_loss': 3.4876769, 'train_feature_extractor_1_loss': 20.029495, 'train_generator_PSNR_Y': 7.860678}
+2020-05-15 19:54:58,537 - ISR.train.trainer - DEBUG - Losses at step 1:
+ {'train_d_real_loss': 0.039649133, 'train_d_real_accuracy': 1.0, 'train_d_fake_loss': 0.08498456, 'train_d_fake_accuracy': 0.9946875, 'train_loss': 0.7352869, 'train_generator_loss': 0.5760131, 'train_discriminator_loss': 0.168396, 'train_feature_extractor_loss': 2.449363, 'train_feature_extractor_1_loss': 15.164153, 'train_generator_PSNR_Y': 5.835122}
+2020-05-15 19:55:47,369 - ISR.utils.train_helper - INFO - 
+Training details:
+2020-05-15 19:55:47,373 - ISR.utils.train_helper - INFO -   training_parameters: 
+2020-05-15 19:55:47,375 - ISR.utils.train_helper - INFO -     lr_train_dir: train/low
+2020-05-15 19:55:47,377 - ISR.utils.train_helper - INFO -     hr_train_dir: train/high
+2020-05-15 19:55:47,378 - ISR.utils.train_helper - INFO -     lr_valid_dir: test/low
+2020-05-15 19:55:47,379 - ISR.utils.train_helper - INFO -     hr_valid_dir: test/high
+2020-05-15 19:55:47,381 - ISR.utils.train_helper - INFO -     loss_weights: {'generator': 0.0, 'feature_extractor': 0.0833, 'discriminator': 0.01}
+2020-05-15 19:55:47,382 - ISR.utils.train_helper - INFO -     log_dirs: {'logs': './logs', 'weights': './weights'}
+2020-05-15 19:55:47,384 - ISR.utils.train_helper - INFO -     fallback_save_every_n_epochs: 2
+2020-05-15 19:55:47,385 - ISR.utils.train_helper - INFO -     dataname: image_dataset
+2020-05-15 19:55:47,386 - ISR.utils.train_helper - INFO -     n_validation: 40
+2020-05-15 19:55:47,388 - ISR.utils.train_helper - INFO -     flatness: {'min': 0.0, 'max': 0.15, 'increase': 0.01, 'increase_frequency': 5}
+2020-05-15 19:55:47,389 - ISR.utils.train_helper - INFO -     learning_rate: {'initial_value': 0.0004, 'decay_factor': 0.5, 'decay_frequency': 30}
+2020-05-15 19:55:47,390 - ISR.utils.train_helper - INFO -     adam_optimizer: {'beta1': 0.9, 'beta2': 0.999, 'epsilon': None}
+2020-05-15 19:55:47,392 - ISR.utils.train_helper - INFO -     losses: {'generator': 'mae', 'discriminator': 'binary_crossentropy', 'feature_extractor': 'mse'}
+2020-05-15 19:55:47,393 - ISR.utils.train_helper - INFO -     metrics: {'generator': <function PSNR_Y at 0x000001D3B7D89840>}
+2020-05-15 19:55:47,395 - ISR.utils.train_helper - INFO -     lr_patch_size: 40
+2020-05-15 19:55:47,396 - ISR.utils.train_helper - INFO -     steps_per_epoch: 10
+2020-05-15 19:55:47,397 - ISR.utils.train_helper - INFO -     batch_size: 16
+2020-05-15 19:55:47,399 - ISR.utils.train_helper - INFO -     starting_epoch: 0
+2020-05-15 19:55:47,400 - ISR.utils.train_helper - INFO -   generator: 
+2020-05-15 19:55:47,402 - ISR.utils.train_helper - INFO -     name: rrdn
+2020-05-15 19:55:47,403 - ISR.utils.train_helper - INFO -     parameters: {'C': 4, 'D': 3, 'G': 64, 'G0': 64, 'T': 10, 'x': 2}
+2020-05-15 19:55:47,404 - ISR.utils.train_helper - INFO -     weights_generator: None
+2020-05-15 19:55:47,406 - ISR.utils.train_helper - INFO -   discriminator: 
+2020-05-15 19:55:47,407 - ISR.utils.train_helper - INFO -     name: srgan-large
+2020-05-15 19:55:47,408 - ISR.utils.train_helper - INFO -     weights_discriminator: None
+2020-05-15 19:55:47,410 - ISR.utils.train_helper - INFO -   feature_extractor: 
+2020-05-15 19:55:47,411 - ISR.utils.train_helper - INFO -     name: vgg19
+2020-05-15 19:55:47,412 - ISR.utils.train_helper - INFO -     layers: [5, 9]
+2020-05-15 19:55:58,523 - ISR.train.trainer - INFO - Epoch 0/1
+2020-05-15 19:55:58,528 - ISR.train.trainer - INFO - Current learning rate: 0.00039999998989515007
+2020-05-15 19:56:31,790 - ISR.train.trainer - DEBUG - Losses at step 0:
+ {'train_d_real_loss': 0.6884909, 'train_d_real_accuracy': 0.586875, 'train_d_fake_loss': 0.99989265, 'train_d_fake_accuracy': 0.27578124, 'train_loss': 1.5311797, 'train_generator_loss': 0.3440185, 'train_discriminator_loss': 0.62439173, 'train_feature_extractor_loss': 5.5970263, 'train_feature_extractor_1_loss': 31.016075, 'train_generator_PSNR_Y': 7.468391}
+2020-05-15 19:57:03,391 - ISR.train.trainer - DEBUG - Losses at step 1:
+ {'train_d_real_loss': 0.5490276, 'train_d_real_accuracy': 0.72375, 'train_d_fake_loss': 0.80655885, 'train_d_fake_accuracy': 0.4496875, 'train_loss': 0.70367926, 'train_generator_loss': 0.5444458, 'train_discriminator_loss': 0.6608322, 'train_feature_extractor_loss': 2.5908997, 'train_feature_extractor_1_loss': 14.145496, 'train_generator_PSNR_Y': 6.614246}
+2020-05-15 19:57:35,020 - ISR.train.trainer - DEBUG - Losses at step 2:
+ {'train_d_real_loss': 0.64421827, 'train_d_real_accuracy': 0.62359375, 'train_d_fake_loss': 0.5936189, 'train_d_fake_accuracy': 0.693125, 'train_loss': 0.8056134, 'train_generator_loss': 0.65709853, 'train_discriminator_loss': 0.5545334, 'train_feature_extractor_loss': 3.0344403, 'train_feature_extractor_1_loss': 16.174877, 'train_generator_PSNR_Y': 4.8762846}
+2020-05-15 19:58:06,677 - ISR.train.trainer - DEBUG - Losses at step 3:
+ {'train_d_real_loss': 0.47126755, 'train_d_real_accuracy': 0.74859375, 'train_d_fake_loss': 0.54844093, 'train_d_fake_accuracy': 0.63875, 'train_loss': 0.6292206, 'train_generator_loss': 0.36434639, 'train_discriminator_loss': 0.4146241, 'train_feature_extractor_loss': 1.9901356, 'train_feature_extractor_1_loss': 13.017652, 'train_generator_PSNR_Y': 9.511224}
+2020-05-15 19:58:38,220 - ISR.train.trainer - DEBUG - Losses at step 4:
+ {'train_d_real_loss': 0.50676775, 'train_d_real_accuracy': 0.6803125, 'train_d_fake_loss': 0.42740571, 'train_d_fake_accuracy': 0.7732813, 'train_loss': 1.1565093, 'train_generator_loss': 0.4506663, 'train_discriminator_loss': 0.47839797, 'train_feature_extractor_loss': 4.0321474, 'train_feature_extractor_1_loss': 23.62032, 'train_generator_PSNR_Y': 7.1704288}
+2020-05-15 19:59:09,805 - ISR.train.trainer - DEBUG - Losses at step 5:
+ {'train_d_real_loss': 0.25270975, 'train_d_real_accuracy': 0.919375, 'train_d_fake_loss': 0.4008011, 'train_d_fake_accuracy': 0.8028125, 'train_loss': 0.7472496, 'train_generator_loss': 0.63253987, 'train_discriminator_loss': 0.7392795, 'train_feature_extractor_loss': 2.552574, 'train_feature_extractor_1_loss': 15.211095, 'train_generator_PSNR_Y': 5.697512}
+2020-05-15 19:59:41,395 - ISR.train.trainer - DEBUG - Losses at step 6:
+ {'train_d_real_loss': 0.13472518, 'train_d_real_accuracy': 0.99421877, 'train_d_fake_loss': 0.20496117, 'train_d_fake_accuracy': 0.96453124, 'train_loss': 1.7199708, 'train_generator_loss': 0.6936728, 'train_discriminator_loss': 0.22151375, 'train_feature_extractor_loss': 6.3441267, 'train_feature_extractor_1_loss': 34.898506, 'train_generator_PSNR_Y': 3.7748294}
+2020-05-15 20:00:12,974 - ISR.train.trainer - DEBUG - Losses at step 7:
+ {'train_d_real_loss': 0.12764353, 'train_d_real_accuracy': 0.9973438, 'train_d_fake_loss': 0.1661295, 'train_d_fake_accuracy': 0.98828125, 'train_loss': 0.51958454, 'train_generator_loss': 0.7408412, 'train_discriminator_loss': 0.1817516, 'train_feature_extractor_loss': 1.9446918, 'train_feature_extractor_1_loss': 10.48669, 'train_generator_PSNR_Y': 3.804394}
+2020-05-15 20:00:44,772 - ISR.train.trainer - DEBUG - Losses at step 8:
+ {'train_d_real_loss': 0.10468054, 'train_d_real_accuracy': 0.9940625, 'train_d_fake_loss': 0.09908135, 'train_d_fake_accuracy': 0.9976562, 'train_loss': 0.3926359, 'train_generator_loss': 0.77354836, 'train_discriminator_loss': 0.04611109, 'train_feature_extractor_loss': 1.3276042, 'train_feature_extractor_1_loss': 8.088357, 'train_generator_PSNR_Y': 3.2870066}
+2020-05-15 20:01:16,867 - ISR.train.trainer - DEBUG - Losses at step 9:
+ {'train_d_real_loss': 0.43910888, 'train_d_real_accuracy': 0.7498438, 'train_d_fake_loss': 0.05009074, 'train_d_fake_accuracy': 1.0, 'train_loss': 0.48833084, 'train_generator_loss': 0.38179436, 'train_discriminator_loss': 0.020500211, 'train_feature_extractor_loss': 1.9782528, 'train_feature_extractor_1_loss': 9.741455, 'train_generator_PSNR_Y': 8.287415}
+2020-05-15 20:01:16,869 - ISR.train.trainer - INFO - Epoch 0 took      318.3s
+2020-05-15 20:04:23,100 - ISR.train.trainer - ERROR - val_PSNR_Y is NOT among the model metrics, removing it.
+2020-05-15 20:04:23,102 - ISR.utils.train_helper - INFO - {'val_loss': 1.1464661061763763, 'val_generator_loss': 0.47401962, 'val_discriminator_loss': 0.022348702, 'val_feature_extractor_loss': 4.0568666, 'val_feature_extractor_1_loss': 23.463968, 'val_generator_PSNR_Y': 7.388972, 'train_d_real_loss': 0.43910888, 'train_d_real_accuracy': 0.7498438, 'train_d_fake_loss': 0.05009074, 'train_d_fake_accuracy': 1.0, 'train_loss': 0.48833084, 'train_generator_loss': 0.38179436, 'train_discriminator_loss': 0.020500211, 'train_feature_extractor_loss': 1.9782528, 'train_feature_extractor_1_loss': 9.741455, 'train_generator_PSNR_Y': 8.287415}
+2020-05-15 20:07:31,568 - ISR.utils.train_helper - INFO - 
+Training details:
+2020-05-15 20:07:31,570 - ISR.utils.train_helper - INFO -   training_parameters: 
+2020-05-15 20:07:31,571 - ISR.utils.train_helper - INFO -     lr_train_dir: train/low
+2020-05-15 20:07:31,573 - ISR.utils.train_helper - INFO -     hr_train_dir: train/high
+2020-05-15 20:07:31,575 - ISR.utils.train_helper - INFO -     lr_valid_dir: test/low
+2020-05-15 20:07:31,577 - ISR.utils.train_helper - INFO -     hr_valid_dir: test/high
+2020-05-15 20:07:31,579 - ISR.utils.train_helper - INFO -     loss_weights: {'generator': 0.0, 'feature_extractor': 0.0833, 'discriminator': 0.01}
+2020-05-15 20:07:31,580 - ISR.utils.train_helper - INFO -     log_dirs: {'logs': './logs', 'weights': './weights'}
+2020-05-15 20:07:31,582 - ISR.utils.train_helper - INFO -     fallback_save_every_n_epochs: 2
+2020-05-15 20:07:31,583 - ISR.utils.train_helper - INFO -     dataname: image_dataset
+2020-05-15 20:07:31,585 - ISR.utils.train_helper - INFO -     n_validation: 40
+2020-05-15 20:07:31,586 - ISR.utils.train_helper - INFO -     flatness: {'min': 0.0, 'max': 0.15, 'increase': 0.01, 'increase_frequency': 5}
+2020-05-15 20:07:31,587 - ISR.utils.train_helper - INFO -     learning_rate: {'initial_value': 0.0004, 'decay_factor': 0.5, 'decay_frequency': 30}
+2020-05-15 20:07:31,589 - ISR.utils.train_helper - INFO -     adam_optimizer: {'beta1': 0.9, 'beta2': 0.999, 'epsilon': None}
+2020-05-15 20:07:31,590 - ISR.utils.train_helper - INFO -     losses: {'generator': 'mae', 'discriminator': 'binary_crossentropy', 'feature_extractor': 'mse'}
+2020-05-15 20:07:31,592 - ISR.utils.train_helper - INFO -     metrics: {'generator': <function PSNR_Y at 0x000001D3B7D89840>}
+2020-05-15 20:07:31,593 - ISR.utils.train_helper - INFO -     lr_patch_size: 40
+2020-05-15 20:07:31,595 - ISR.utils.train_helper - INFO -     steps_per_epoch: 15
+2020-05-15 20:07:31,596 - ISR.utils.train_helper - INFO -     batch_size: 16
+2020-05-15 20:07:31,597 - ISR.utils.train_helper - INFO -     starting_epoch: 0
+2020-05-15 20:07:31,599 - ISR.utils.train_helper - INFO -   generator: 
+2020-05-15 20:07:31,600 - ISR.utils.train_helper - INFO -     name: rrdn
+2020-05-15 20:07:31,602 - ISR.utils.train_helper - INFO -     parameters: {'C': 4, 'D': 3, 'G': 64, 'G0': 64, 'T': 10, 'x': 2}
+2020-05-15 20:07:31,603 - ISR.utils.train_helper - INFO -     weights_generator: None
+2020-05-15 20:07:31,605 - ISR.utils.train_helper - INFO -   discriminator: 
+2020-05-15 20:07:31,606 - ISR.utils.train_helper - INFO -     name: srgan-large
+2020-05-15 20:07:31,607 - ISR.utils.train_helper - INFO -     weights_discriminator: None
+2020-05-15 20:07:31,609 - ISR.utils.train_helper - INFO -   feature_extractor: 
+2020-05-15 20:07:31,610 - ISR.utils.train_helper - INFO -     name: vgg19
+2020-05-15 20:07:31,612 - ISR.utils.train_helper - INFO -     layers: [5, 9]
+2020-05-15 20:07:43,164 - ISR.train.trainer - INFO - Epoch 0/1
+2020-05-15 20:07:43,170 - ISR.train.trainer - INFO - Current learning rate: 0.00039999998989515007
+2020-05-15 20:08:17,898 - ISR.train.trainer - DEBUG - Losses at step 0:
+ {'train_d_real_loss': 0.9548094, 'train_d_real_accuracy': 0.349375, 'train_d_fake_loss': 0.76771027, 'train_d_fake_accuracy': 0.6015625, 'train_loss': 0.4644531, 'train_generator_loss': 0.42269886, 'train_discriminator_loss': 0.6254471, 'train_feature_extractor_loss': 1.5790814, 'train_feature_extractor_1_loss': 9.422086, 'train_generator_PSNR_Y': 9.515359}
+2020-05-15 20:08:50,490 - ISR.train.trainer - DEBUG - Losses at step 1:
+ {'train_d_real_loss': 0.79591936, 'train_d_real_accuracy': 0.520625, 'train_d_fake_loss': 0.8146016, 'train_d_fake_accuracy': 0.46953124, 'train_loss': 1.6922452, 'train_generator_loss': 0.80422395, 'train_discriminator_loss': 0.62115395, 'train_feature_extractor_loss': 6.6334205, 'train_feature_extractor_1_loss': 33.84758, 'train_generator_PSNR_Y': 2.4189503}
+2020-05-15 20:09:23,091 - ISR.train.trainer - DEBUG - Losses at step 2:
+ {'train_d_real_loss': 0.4134034, 'train_d_real_accuracy': 0.848125, 'train_d_fake_loss': 0.879551, 'train_d_fake_accuracy': 0.47546875, 'train_loss': 0.6183882, 'train_generator_loss': 0.55833936, 'train_discriminator_loss': 0.7472287, 'train_feature_extractor_loss': 2.0997117, 'train_feature_extractor_1_loss': 12.568136, 'train_generator_PSNR_Y': 6.795846}
+2020-05-15 20:09:55,923 - ISR.train.trainer - DEBUG - Losses at step 3:
+ {'train_d_real_loss': 0.438284, 'train_d_real_accuracy': 0.80265623, 'train_d_fake_loss': 0.69969195, 'train_d_fake_accuracy': 0.554375, 'train_loss': 0.5161693, 'train_generator_loss': 0.40124893, 'train_discriminator_loss': 0.77174073, 'train_feature_extractor_loss': 1.7182404, 'train_feature_extractor_1_loss': 10.489488, 'train_generator_PSNR_Y': 7.8263555}
+2020-05-15 20:10:27,927 - ISR.train.trainer - DEBUG - Losses at step 4:
+ {'train_d_real_loss': 0.42232215, 'train_d_real_accuracy': 0.803125, 'train_d_fake_loss': 0.874892, 'train_d_fake_accuracy': 0.42921874, 'train_loss': 0.5134372, 'train_generator_loss': 0.47038636, 'train_discriminator_loss': 0.9265335, 'train_feature_extractor_loss': 1.7552371, 'train_feature_extractor_1_loss': 10.3497305, 'train_generator_PSNR_Y': 7.7087035}
+2020-05-15 20:11:00,356 - ISR.train.trainer - DEBUG - Losses at step 5:
+ {'train_d_real_loss': 0.34333283, 'train_d_real_accuracy': 0.935, 'train_d_fake_loss': 0.42287132, 'train_d_fake_accuracy': 0.82765627, 'train_loss': 2.327352, 'train_generator_loss': 0.44401336, 'train_discriminator_loss': 1.8951982, 'train_feature_extractor_loss': 8.244761, 'train_feature_extractor_1_loss': 47.179012, 'train_generator_PSNR_Y': 7.9856024}
+2020-05-15 20:11:32,448 - ISR.train.trainer - DEBUG - Losses at step 6:
+ {'train_d_real_loss': 0.33481163, 'train_d_real_accuracy': 0.95703125, 'train_d_fake_loss': 0.34945202, 'train_d_fake_accuracy': 0.89265627, 'train_loss': 1.2877895, 'train_generator_loss': 0.48801082, 'train_discriminator_loss': 0.9911125, 'train_feature_extractor_loss': 4.89097, 'train_feature_extractor_1_loss': 25.79038, 'train_generator_PSNR_Y': 5.387314}
+2020-05-15 20:12:04,533 - ISR.train.trainer - DEBUG - Losses at step 7:
+ {'train_d_real_loss': 0.15905991, 'train_d_real_accuracy': 0.9915625, 'train_d_fake_loss': 0.12308745, 'train_d_fake_accuracy': 0.9984375, 'train_loss': 0.9086747, 'train_generator_loss': 0.53864825, 'train_discriminator_loss': 0.22880644, 'train_feature_extractor_loss': 3.1572943, 'train_feature_extractor_1_loss': 18.60469, 'train_generator_PSNR_Y': 5.5006275}
+2020-05-15 20:12:36,651 - ISR.train.trainer - DEBUG - Losses at step 8:
+ {'train_d_real_loss': 0.23429954, 'train_d_real_accuracy': 0.9845312, 'train_d_fake_loss': 0.1863519, 'train_d_fake_accuracy': 0.9959375, 'train_loss': 1.8446858, 'train_generator_loss': 0.63662034, 'train_discriminator_loss': 0.082275294, 'train_feature_extractor_loss': 6.6153936, 'train_feature_extractor_1_loss': 37.655025, 'train_generator_PSNR_Y': 4.9665537}
+2020-05-15 20:13:12,951 - ISR.train.trainer - DEBUG - Losses at step 9:
+ {'train_d_real_loss': 0.052489843, 'train_d_real_accuracy': 1.0, 'train_d_fake_loss': 0.20116974, 'train_d_fake_accuracy': 0.9846875, 'train_loss': 0.889145, 'train_generator_loss': 0.5366587, 'train_discriminator_loss': 0.05158068, 'train_feature_extractor_loss': 3.3491497, 'train_feature_extractor_1_loss': 17.986485, 'train_generator_PSNR_Y': 5.566536}
+2020-05-15 20:13:45,600 - ISR.train.trainer - DEBUG - Losses at step 10:
+ {'train_d_real_loss': 0.10393229, 'train_d_real_accuracy': 1.0, 'train_d_fake_loss': 0.1324684, 'train_d_fake_accuracy': 0.99828124, 'train_loss': 2.4102612, 'train_generator_loss': 0.68962145, 'train_discriminator_loss': 0.0681493, 'train_feature_extractor_loss': 8.741692, 'train_feature_extractor_1_loss': 49.11136, 'train_generator_PSNR_Y': 3.872131}
+2020-05-15 20:14:35,297 - ISR.utils.train_helper - INFO - 
+Training details:
+2020-05-15 20:14:35,302 - ISR.utils.train_helper - INFO -   training_parameters: 
+2020-05-15 20:14:35,303 - ISR.utils.train_helper - INFO -     lr_train_dir: train/low
+2020-05-15 20:14:35,305 - ISR.utils.train_helper - INFO -     hr_train_dir: train/high
+2020-05-15 20:14:35,307 - ISR.utils.train_helper - INFO -     lr_valid_dir: test/low
+2020-05-15 20:14:35,309 - ISR.utils.train_helper - INFO -     hr_valid_dir: test/high
+2020-05-15 20:14:35,310 - ISR.utils.train_helper - INFO -     loss_weights: {'generator': 0.0, 'feature_extractor': 0.0833, 'discriminator': 0.01}
+2020-05-15 20:14:35,312 - ISR.utils.train_helper - INFO -     log_dirs: {'logs': './logs', 'weights': './weights'}
+2020-05-15 20:14:35,314 - ISR.utils.train_helper - INFO -     fallback_save_every_n_epochs: 2
+2020-05-15 20:14:35,315 - ISR.utils.train_helper - INFO -     dataname: image_dataset
+2020-05-15 20:14:35,317 - ISR.utils.train_helper - INFO -     n_validation: 40
+2020-05-15 20:14:35,318 - ISR.utils.train_helper - INFO -     flatness: {'min': 0.0, 'max': 0.15, 'increase': 0.01, 'increase_frequency': 5}
+2020-05-15 20:14:35,320 - ISR.utils.train_helper - INFO -     learning_rate: {'initial_value': 0.0004, 'decay_factor': 0.5, 'decay_frequency': 30}
+2020-05-15 20:14:35,322 - ISR.utils.train_helper - INFO -     adam_optimizer: {'beta1': 0.9, 'beta2': 0.999, 'epsilon': None}
+2020-05-15 20:14:35,323 - ISR.utils.train_helper - INFO -     losses: {'generator': 'mae', 'discriminator': 'binary_crossentropy', 'feature_extractor': 'mse'}
+2020-05-15 20:14:35,325 - ISR.utils.train_helper - INFO -     metrics: {'generator': <function PSNR_Y at 0x000001796B627840>}
+2020-05-15 20:14:35,326 - ISR.utils.train_helper - INFO -     lr_patch_size: 40
+2020-05-15 20:14:35,328 - ISR.utils.train_helper - INFO -     steps_per_epoch: 12
+2020-05-15 20:14:35,329 - ISR.utils.train_helper - INFO -     batch_size: 16
+2020-05-15 20:14:35,331 - ISR.utils.train_helper - INFO -     starting_epoch: 0
+2020-05-15 20:14:35,332 - ISR.utils.train_helper - INFO -   generator: 
+2020-05-15 20:14:35,334 - ISR.utils.train_helper - INFO -     name: rrdn
+2020-05-15 20:14:35,336 - ISR.utils.train_helper - INFO -     parameters: {'C': 4, 'D': 3, 'G': 64, 'G0': 64, 'T': 10, 'x': 2}
+2020-05-15 20:14:35,337 - ISR.utils.train_helper - INFO -     weights_generator: None
+2020-05-15 20:14:35,339 - ISR.utils.train_helper - INFO -   discriminator: 
+2020-05-15 20:14:35,340 - ISR.utils.train_helper - INFO -     name: srgan-large
+2020-05-15 20:14:35,342 - ISR.utils.train_helper - INFO -     weights_discriminator: None
+2020-05-15 20:14:35,343 - ISR.utils.train_helper - INFO -   feature_extractor: 
+2020-05-15 20:14:35,344 - ISR.utils.train_helper - INFO -     name: vgg19
+2020-05-15 20:14:35,346 - ISR.utils.train_helper - INFO -     layers: [5, 9]
+2020-05-15 20:14:46,478 - ISR.train.trainer - INFO - Epoch 0/1
+2020-05-15 20:14:46,484 - ISR.train.trainer - INFO - Current learning rate: 0.00039999998989515007
+2020-05-15 20:15:22,005 - ISR.train.trainer - DEBUG - Losses at step 0:
+ {'train_d_real_loss': 1.0746382, 'train_d_real_accuracy': 0.27140626, 'train_d_fake_loss': 0.62120193, 'train_d_fake_accuracy': 0.64640623, 'train_loss': 0.5071277, 'train_generator_loss': 0.5572385, 'train_discriminator_loss': 0.71964324, 'train_feature_extractor_loss': 1.793728, 'train_feature_extractor_1_loss': 10.209424, 'train_generator_PSNR_Y': 6.762838}
+2020-05-15 20:15:54,227 - ISR.train.trainer - DEBUG - Losses at step 1:
+ {'train_d_real_loss': 0.963897, 'train_d_real_accuracy': 0.33140624, 'train_d_fake_loss': 0.5990246, 'train_d_fake_accuracy': 0.6575, 'train_loss': 3.9589396, 'train_generator_loss': 0.5501034, 'train_discriminator_loss': 0.7205693, 'train_feature_extractor_loss': 15.017713, 'train_feature_extractor_1_loss': 79.86185, 'train_generator_PSNR_Y': 5.325982}
+2020-05-15 20:16:29,309 - ISR.train.trainer - DEBUG - Losses at step 2:
+ {'train_d_real_loss': 0.6019261, 'train_d_real_accuracy': 0.73828125, 'train_d_fake_loss': 0.4068979, 'train_d_fake_accuracy': 0.779375, 'train_loss': 0.9727681, 'train_generator_loss': 0.86838335, 'train_discriminator_loss': 0.5838686, 'train_feature_extractor_loss': 3.998574, 'train_feature_extractor_1_loss': 19.217018, 'train_generator_PSNR_Y': 2.3735354}
+2020-05-15 20:17:02,266 - ISR.train.trainer - DEBUG - Losses at step 3:
+ {'train_d_real_loss': 0.7353737, 'train_d_real_accuracy': 0.5671875, 'train_d_fake_loss': 0.71611345, 'train_d_fake_accuracy': 0.51640624, 'train_loss': 0.7183673, 'train_generator_loss': 0.37230778, 'train_discriminator_loss': 1.2707467, 'train_feature_extractor_loss': 2.6422753, 'train_feature_extractor_1_loss': 14.300337, 'train_generator_PSNR_Y': 8.1393585}
+2020-05-15 20:17:36,040 - ISR.train.trainer - DEBUG - Losses at step 4:
+ {'train_d_real_loss': 0.7508356, 'train_d_real_accuracy': 0.590625, 'train_d_fake_loss': 0.8215062, 'train_d_fake_accuracy': 0.5878125, 'train_loss': 2.6090155, 'train_generator_loss': 0.42855713, 'train_discriminator_loss': 0.79516774, 'train_feature_extractor_loss': 9.206551, 'train_feature_extractor_1_loss': 53.24396, 'train_generator_PSNR_Y': 8.265236}
+2020-05-15 20:18:09,240 - ISR.train.trainer - DEBUG - Losses at step 5:
+ {'train_d_real_loss': 0.4673563, 'train_d_real_accuracy': 0.7235938, 'train_d_fake_loss': 0.26422268, 'train_d_fake_accuracy': 0.9582813, 'train_loss': 0.9880617, 'train_generator_loss': 0.25066432, 'train_discriminator_loss': 1.1574335, 'train_feature_extractor_loss': 3.1411157, 'train_feature_extractor_1_loss': 20.303959, 'train_generator_PSNR_Y': 12.335409}
+2020-05-15 20:18:41,017 - ISR.train.trainer - DEBUG - Losses at step 6:
+ {'train_d_real_loss': 0.2110702, 'train_d_real_accuracy': 0.96734375, 'train_d_fake_loss': 0.17539167, 'train_d_fake_accuracy': 0.99609375, 'train_loss': 1.4868541, 'train_generator_loss': 0.40683052, 'train_discriminator_loss': 0.75888306, 'train_feature_extractor_loss': 5.1138873, 'train_feature_extractor_1_loss': 30.402685, 'train_generator_PSNR_Y': 7.7164116}
+2020-05-15 20:19:12,823 - ISR.train.trainer - DEBUG - Losses at step 7:
+ {'train_d_real_loss': 0.19343247, 'train_d_real_accuracy': 0.99265623, 'train_d_fake_loss': 0.10520941, 'train_d_fake_accuracy': 1.0, 'train_loss': 1.51343, 'train_generator_loss': 0.44943446, 'train_discriminator_loss': 0.31854874, 'train_feature_extractor_loss': 5.5126147, 'train_feature_extractor_1_loss': 30.747757, 'train_generator_PSNR_Y': 7.1478786}
+2020-05-15 20:19:44,474 - ISR.train.trainer - DEBUG - Losses at step 8:
+ {'train_d_real_loss': 0.15241697, 'train_d_real_accuracy': 0.998125, 'train_d_fake_loss': 0.1433199, 'train_d_fake_accuracy': 0.999375, 'train_loss': 2.9179087, 'train_generator_loss': 0.5097628, 'train_discriminator_loss': 0.17123295, 'train_feature_extractor_loss': 11.424171, 'train_feature_extractor_1_loss': 58.59255, 'train_generator_PSNR_Y': 5.742078}
+2020-05-15 20:20:16,226 - ISR.train.trainer - DEBUG - Losses at step 9:
+ {'train_d_real_loss': 0.116256386, 'train_d_real_accuracy': 1.0, 'train_d_fake_loss': 0.13540001, 'train_d_fake_accuracy': 0.99859375, 'train_loss': 1.1903278, 'train_generator_loss': 0.4237558, 'train_discriminator_loss': 0.17126255, 'train_feature_extractor_loss': 4.019497, 'train_feature_extractor_1_loss': 24.518679, 'train_generator_PSNR_Y': 8.696423}
+2020-05-15 20:20:47,840 - ISR.train.trainer - DEBUG - Losses at step 10:
+ {'train_d_real_loss': 0.05110526, 'train_d_real_accuracy': 1.0, 'train_d_fake_loss': 0.11683322, 'train_d_fake_accuracy': 1.0, 'train_loss': 1.3664892, 'train_generator_loss': 0.65566885, 'train_discriminator_loss': 0.12064992, 'train_feature_extractor_loss': 4.3886323, 'train_feature_extractor_1_loss': 28.391264, 'train_generator_PSNR_Y': 4.308768}
+2020-05-15 20:21:19,526 - ISR.train.trainer - DEBUG - Losses at step 11:
+ {'train_d_real_loss': 0.095134884, 'train_d_real_accuracy': 0.99921876, 'train_d_fake_loss': 0.178927, 'train_d_fake_accuracy': 0.9998438, 'train_loss': 0.7355642, 'train_generator_loss': 0.5052467, 'train_discriminator_loss': 0.084356576, 'train_feature_extractor_loss': 2.6602943, 'train_feature_extractor_1_loss': 14.980056, 'train_generator_PSNR_Y': 6.526603}
+2020-05-15 20:21:19,529 - ISR.train.trainer - INFO - Epoch 0 took      393.0s
+2020-05-15 20:24:24,726 - ISR.train.trainer - ERROR - val_PSNR_Y is NOT among the model metrics, removing it.
+2020-05-15 20:24:24,729 - ISR.utils.train_helper - INFO - {'val_loss': 1.0321314483880997, 'val_generator_loss': 0.45422593, 'val_discriminator_loss': 0.087609604, 'val_feature_extractor_loss': 3.65153, 'val_feature_extractor_1_loss': 21.108501, 'val_generator_PSNR_Y': 7.984864, 'train_d_real_loss': 0.095134884, 'train_d_real_accuracy': 0.99921876, 'train_d_fake_loss': 0.178927, 'train_d_fake_accuracy': 0.9998438, 'train_loss': 0.7355642, 'train_generator_loss': 0.5052467, 'train_discriminator_loss': 0.084356576, 'train_feature_extractor_loss': 2.6602943, 'train_feature_extractor_1_loss': 14.980056, 'train_generator_PSNR_Y': 6.526603}
+2020-05-15 21:43:31,873 - ISR.utils.train_helper - INFO - 
+Training details:
+2020-05-15 21:43:31,877 - ISR.utils.train_helper - INFO -   training_parameters: 
+2020-05-15 21:43:31,880 - ISR.utils.train_helper - INFO -     lr_train_dir: train/low
+2020-05-15 21:43:31,882 - ISR.utils.train_helper - INFO -     hr_train_dir: train/high
+2020-05-15 21:43:31,884 - ISR.utils.train_helper - INFO -     lr_valid_dir: test/low
+2020-05-15 21:43:31,886 - ISR.utils.train_helper - INFO -     hr_valid_dir: test/high
+2020-05-15 21:43:31,889 - ISR.utils.train_helper - INFO -     loss_weights: {'generator': 0.0, 'feature_extractor': 0.0833, 'discriminator': 0.01}
+2020-05-15 21:43:31,890 - ISR.utils.train_helper - INFO -     log_dirs: {'logs': './logs', 'weights': './weights'}
+2020-05-15 21:43:31,892 - ISR.utils.train_helper - INFO -     fallback_save_every_n_epochs: 2
+2020-05-15 21:43:31,894 - ISR.utils.train_helper - INFO -     dataname: image_dataset
+2020-05-15 21:43:31,896 - ISR.utils.train_helper - INFO -     n_validation: 40
+2020-05-15 21:43:31,898 - ISR.utils.train_helper - INFO -     flatness: {'min': 0.0, 'max': 0.15, 'increase': 0.01, 'increase_frequency': 5}
+2020-05-15 21:43:31,899 - ISR.utils.train_helper - INFO -     learning_rate: {'initial_value': 0.0004, 'decay_factor': 0.5, 'decay_frequency': 30}
+2020-05-15 21:43:31,901 - ISR.utils.train_helper - INFO -     adam_optimizer: {'beta1': 0.9, 'beta2': 0.999, 'epsilon': None}
+2020-05-15 21:43:31,902 - ISR.utils.train_helper - INFO -     losses: {'generator': 'mae', 'discriminator': 'binary_crossentropy', 'feature_extractor': 'mse'}
+2020-05-15 21:43:31,903 - ISR.utils.train_helper - INFO -     metrics: {'generator': <function PSNR_Y at 0x000001796B627840>}
+2020-05-15 21:43:31,905 - ISR.utils.train_helper - INFO -     lr_patch_size: 40
+2020-05-15 21:43:31,910 - ISR.utils.train_helper - INFO -     steps_per_epoch: 12
+2020-05-15 21:43:31,911 - ISR.utils.train_helper - INFO -     batch_size: 16
+2020-05-15 21:43:31,913 - ISR.utils.train_helper - INFO -     starting_epoch: 0
+2020-05-15 21:43:31,915 - ISR.utils.train_helper - INFO -   generator: 
+2020-05-15 21:43:31,916 - ISR.utils.train_helper - INFO -     name: rrdn
+2020-05-15 21:43:31,918 - ISR.utils.train_helper - INFO -     parameters: {'C': 4, 'D': 3, 'G': 64, 'G0': 64, 'T': 10, 'x': 2}
+2020-05-15 21:43:31,919 - ISR.utils.train_helper - INFO -     weights_generator: None
+2020-05-15 21:43:31,921 - ISR.utils.train_helper - INFO -   discriminator: 
+2020-05-15 21:43:31,922 - ISR.utils.train_helper - INFO -     name: srgan-large
+2020-05-15 21:43:31,924 - ISR.utils.train_helper - INFO -     weights_discriminator: None
+2020-05-15 21:43:31,925 - ISR.utils.train_helper - INFO -   feature_extractor: 
+2020-05-15 21:43:31,927 - ISR.utils.train_helper - INFO -     name: vgg19
+2020-05-15 21:43:31,928 - ISR.utils.train_helper - INFO -     layers: [5, 9]
+2020-05-15 21:43:43,075 - ISR.train.trainer - INFO - Epoch 0/1
+2020-05-15 21:43:43,080 - ISR.train.trainer - INFO - Current learning rate: 0.00039999998989515007
+2020-05-15 21:44:20,755 - ISR.train.trainer - DEBUG - Losses at step 0:
+ {'train_d_real_loss': 1.0417424, 'train_d_real_accuracy': 0.23875, 'train_d_fake_loss': 0.6334975, 'train_d_fake_accuracy': 0.64890623, 'train_loss': 1.5428332, 'train_generator_loss': 0.37503272, 'train_discriminator_loss': 0.736284, 'train_feature_extractor_loss': 5.0863104, 'train_feature_extractor_1_loss': 31.779726, 'train_generator_PSNR_Y': 7.5879135}
+2020-05-15 21:44:53,455 - ISR.train.trainer - DEBUG - Losses at step 1:
+ {'train_d_real_loss': 0.7537746, 'train_d_real_accuracy': 0.4825, 'train_d_fake_loss': 0.7519856, 'train_d_fake_accuracy': 0.5126563, 'train_loss': 2.4074144, 'train_generator_loss': 0.5026729, 'train_discriminator_loss': 0.48809594, 'train_feature_extractor_loss': 8.7482605, 'train_feature_extractor_1_loss': 48.935616, 'train_generator_PSNR_Y': 6.1155295}
+2020-05-15 21:45:26,189 - ISR.train.trainer - DEBUG - Losses at step 2:
+ {'train_d_real_loss': 0.4681868, 'train_d_real_accuracy': 0.81296873, 'train_d_fake_loss': 0.7437451, 'train_d_fake_accuracy': 0.55078125, 'train_loss': 0.9071866, 'train_generator_loss': 0.365863, 'train_discriminator_loss': 0.48532668, 'train_feature_extractor_loss': 3.0436594, 'train_feature_extractor_1_loss': 18.621008, 'train_generator_PSNR_Y': 9.06047}
+2020-05-15 21:45:59,975 - ISR.train.trainer - DEBUG - Losses at step 3:
+ {'train_d_real_loss': 0.5153932, 'train_d_real_accuracy': 0.7915625, 'train_d_fake_loss': 0.67735803, 'train_d_fake_accuracy': 0.60515624, 'train_loss': 0.8222774, 'train_generator_loss': 0.392821, 'train_discriminator_loss': 0.6621979, 'train_feature_extractor_loss': 3.097888, 'train_feature_extractor_1_loss': 16.485676, 'train_generator_PSNR_Y': 9.794251}
+2020-05-15 21:46:32,734 - ISR.train.trainer - DEBUG - Losses at step 4:
+ {'train_d_real_loss': 0.43413058, 'train_d_real_accuracy': 0.843125, 'train_d_fake_loss': 0.51863027, 'train_d_fake_accuracy': 0.7548438, 'train_loss': 0.6995864, 'train_generator_loss': 0.74546194, 'train_discriminator_loss': 0.9450416, 'train_feature_extractor_loss': 2.3900578, 'train_feature_extractor_1_loss': 14.179832, 'train_generator_PSNR_Y': 3.6583}
+2020-05-15 21:47:06,761 - ISR.train.trainer - DEBUG - Losses at step 5:
+ {'train_d_real_loss': 0.9224703, 'train_d_real_accuracy': 0.53515625, 'train_d_fake_loss': 0.5329491, 'train_d_fake_accuracy': 0.815, 'train_loss': 0.43056053, 'train_generator_loss': 0.45303535, 'train_discriminator_loss': 0.32440427, 'train_feature_extractor_loss': 1.3417355, 'train_feature_extractor_1_loss': 8.917964, 'train_generator_PSNR_Y': 7.5847783}
+2020-05-15 21:47:39,856 - ISR.train.trainer - DEBUG - Losses at step 6:
+ {'train_d_real_loss': 0.25489956, 'train_d_real_accuracy': 0.9796875, 'train_d_fake_loss': 0.8250116, 'train_d_fake_accuracy': 0.54328126, 'train_loss': 1.2057374, 'train_generator_loss': 0.36840263, 'train_discriminator_loss': 1.0096498, 'train_feature_extractor_loss': 4.127446, 'train_feature_extractor_1_loss': 24.579416, 'train_generator_PSNR_Y': 8.47079}
+2020-05-15 21:48:04,957 - ISR.utils.utils - INFO - Select SR (generator) network
+2020-05-15 21:48:04,961 - ISR.utils.utils - INFO - 0: rrdn
+2020-05-15 21:48:04,962 - ISR.utils.utils - INFO - 1: rdn
+2020-05-15 21:48:12,709 - ISR.train.trainer - DEBUG - Losses at step 7:
+ {'train_d_real_loss': 0.30679774, 'train_d_real_accuracy': 0.911875, 'train_d_fake_loss': 0.24595049, 'train_d_fake_accuracy': 0.9814063, 'train_loss': 0.43715408, 'train_generator_loss': 0.6777546, 'train_discriminator_loss': 0.12809812, 'train_feature_extractor_loss': 1.3290207, 'train_feature_extractor_1_loss': 9.13612, 'train_generator_PSNR_Y': 4.448447}
+2020-05-15 21:48:22,047 - ISR.utils.utils - INFO - Default rdn parameters.
+2020-05-15 21:48:22,049 - ISR.utils.utils - INFO - rdn parameters:
+2020-05-15 21:48:22,050 - ISR.utils.utils - INFO - {'C': 6, 'D': 20, 'G': 64, 'G0': 64, 'x': 2}
+2020-05-15 21:48:45,079 - ISR.train.trainer - DEBUG - Losses at step 8:
+ {'train_d_real_loss': 0.19457917, 'train_d_real_accuracy': 0.97453123, 'train_d_fake_loss': 0.10241436, 'train_d_fake_accuracy': 1.0, 'train_loss': 1.1013302, 'train_generator_loss': 0.5724045, 'train_discriminator_loss': 0.06663989, 'train_feature_extractor_loss': 3.7918725, 'train_feature_extractor_1_loss': 22.634628, 'train_generator_PSNR_Y': 6.0151806}
+2020-05-15 21:48:52,665 - ISR.utils.utils - INFO - Select SR (generator) network
+2020-05-15 21:48:52,667 - ISR.utils.utils - INFO - 0: rrdn
+2020-05-15 21:48:52,668 - ISR.utils.utils - INFO - 1: rdn
+2020-05-15 21:49:03,662 - ISR.utils.utils - INFO - Default rdn parameters.
+2020-05-15 21:49:03,663 - ISR.utils.utils - INFO - rdn parameters:
+2020-05-15 21:49:03,664 - ISR.utils.utils - INFO - {'C': 6, 'D': 20, 'G': 64, 'G0': 64, 'x': 2}
+2020-05-15 21:49:17,647 - ISR.train.trainer - DEBUG - Losses at step 9:
+ {'train_d_real_loss': 0.20813534, 'train_d_real_accuracy': 0.98625, 'train_d_fake_loss': 0.11564448, 'train_d_fake_accuracy': 1.0, 'train_loss': 1.5679977, 'train_generator_loss': 0.66625357, 'train_discriminator_loss': 0.02424544, 'train_feature_extractor_loss': 5.6171556, 'train_feature_extractor_1_loss': 32.024025, 'train_generator_PSNR_Y': 4.164056}
+2020-05-15 21:49:51,195 - ISR.train.trainer - DEBUG - Losses at step 10:
+ {'train_d_real_loss': 0.10450098, 'train_d_real_accuracy': 0.98828125, 'train_d_fake_loss': 0.06105309, 'train_d_fake_accuracy': 1.0, 'train_loss': 0.118016794, 'train_generator_loss': 0.23631105, 'train_discriminator_loss': 0.030605936, 'train_feature_extractor_loss': 0.5002997, 'train_feature_extractor_1_loss': 2.3258884, 'train_generator_PSNR_Y': 12.806122}
+2020-05-15 21:50:23,731 - ISR.train.trainer - DEBUG - Losses at step 11:
+ {'train_d_real_loss': 0.081626564, 'train_d_real_accuracy': 1.0, 'train_d_fake_loss': 0.057295762, 'train_d_fake_accuracy': 1.0, 'train_loss': 0.4628898, 'train_generator_loss': 0.65485746, 'train_discriminator_loss': 0.027507825, 'train_feature_extractor_loss': 1.7469574, 'train_feature_extractor_1_loss': 9.360238, 'train_generator_PSNR_Y': 5.1159844}
+2020-05-15 21:50:23,734 - ISR.train.trainer - INFO - Epoch 0 took      400.7s
+2020-05-15 21:53:36,994 - ISR.train.trainer - ERROR - val_PSNR_Y is NOT among the model metrics, removing it.
+2020-05-15 21:53:36,996 - ISR.utils.train_helper - INFO - {'val_loss': 1.0875155001878738, 'val_generator_loss': 0.41998428, 'val_discriminator_loss': 0.032751627, 'val_feature_extractor_loss': 3.9661858, 'val_feature_extractor_1_loss': 22.136768, 'val_generator_PSNR_Y': 8.339801, 'train_d_real_loss': 0.081626564, 'train_d_real_accuracy': 1.0, 'train_d_fake_loss': 0.057295762, 'train_d_fake_accuracy': 1.0, 'train_loss': 0.4628898, 'train_generator_loss': 0.65485746, 'train_discriminator_loss': 0.027507825, 'train_feature_extractor_loss': 1.7469574, 'train_feature_extractor_1_loss': 9.360238, 'train_generator_PSNR_Y': 5.1159844}
+2020-05-18 10:50:29,111 - ISR.utils.train_helper - INFO - 
+Training details:
+2020-05-18 10:50:29,113 - ISR.utils.train_helper - INFO -   training_parameters: 
+2020-05-18 10:50:29,115 - ISR.utils.train_helper - INFO -     lr_train_dir: train/low
+2020-05-18 10:50:29,116 - ISR.utils.train_helper - INFO -     hr_train_dir: train/high
+2020-05-18 10:50:29,118 - ISR.utils.train_helper - INFO -     lr_valid_dir: test/low
+2020-05-18 10:50:29,120 - ISR.utils.train_helper - INFO -     hr_valid_dir: test/high
+2020-05-18 10:50:29,121 - ISR.utils.train_helper - INFO -     loss_weights: {'generator': 0.0, 'feature_extractor': 0.0833, 'discriminator': 0.01}
+2020-05-18 10:50:29,123 - ISR.utils.train_helper - INFO -     log_dirs: {'logs': './logs', 'weights': './weights'}
+2020-05-18 10:50:29,124 - ISR.utils.train_helper - INFO -     fallback_save_every_n_epochs: 2
+2020-05-18 10:50:29,126 - ISR.utils.train_helper - INFO -     dataname: image_dataset
+2020-05-18 10:50:29,128 - ISR.utils.train_helper - INFO -     n_validation: 40
+2020-05-18 10:50:29,129 - ISR.utils.train_helper - INFO -     flatness: {'min': 0.0, 'max': 0.15, 'increase': 0.01, 'increase_frequency': 5}
+2020-05-18 10:50:29,131 - ISR.utils.train_helper - INFO -     learning_rate: {'initial_value': 0.0004, 'decay_factor': 0.5, 'decay_frequency': 30}
+2020-05-18 10:50:29,133 - ISR.utils.train_helper - INFO -     adam_optimizer: {'beta1': 0.9, 'beta2': 0.999, 'epsilon': None}
+2020-05-18 10:50:29,135 - ISR.utils.train_helper - INFO -     losses: {'generator': 'mae', 'discriminator': 'binary_crossentropy', 'feature_extractor': 'mse'}
+2020-05-18 10:50:29,137 - ISR.utils.train_helper - INFO -     metrics: {'generator': <function PSNR_Y at 0x000002B64C5799D8>}
+2020-05-18 10:50:29,138 - ISR.utils.train_helper - INFO -     lr_patch_size: 40
+2020-05-18 10:50:29,140 - ISR.utils.train_helper - INFO -     steps_per_epoch: 12
+2020-05-18 10:50:29,141 - ISR.utils.train_helper - INFO -     batch_size: 16
+2020-05-18 10:50:29,143 - ISR.utils.train_helper - INFO -     starting_epoch: 0
+2020-05-18 10:50:29,145 - ISR.utils.train_helper - INFO -   generator: 
+2020-05-18 10:50:29,146 - ISR.utils.train_helper - INFO -     name: rrdn
+2020-05-18 10:50:29,148 - ISR.utils.train_helper - INFO -     parameters: {'C': 4, 'D': 3, 'G': 64, 'G0': 64, 'T': 10, 'x': 2}
+2020-05-18 10:50:29,150 - ISR.utils.train_helper - INFO -     weights_generator: None
+2020-05-18 10:50:29,151 - ISR.utils.train_helper - INFO -   discriminator: 
+2020-05-18 10:50:29,153 - ISR.utils.train_helper - INFO -     name: srgan-large
+2020-05-18 10:50:29,154 - ISR.utils.train_helper - INFO -     weights_discriminator: None
+2020-05-18 10:50:29,156 - ISR.utils.train_helper - INFO -   feature_extractor: 
+2020-05-18 10:50:29,157 - ISR.utils.train_helper - INFO -     name: vgg19
+2020-05-18 10:50:29,158 - ISR.utils.train_helper - INFO -     layers: [5, 9]
+2020-05-18 10:50:40,559 - ISR.train.trainer - INFO - Epoch 0/1
+2020-05-18 10:50:40,565 - ISR.train.trainer - INFO - Current learning rate: 0.00039999998989515007
+2020-05-18 10:51:15,077 - ISR.train.trainer - DEBUG - Losses at step 0:
+ {'train_d_real_loss': 0.65017074, 'train_d_real_accuracy': 0.59375, 'train_d_fake_loss': 1.2400229, 'train_d_fake_accuracy': 0.30765626, 'train_loss': 1.1765776, 'train_generator_loss': 0.45185798, 'train_discriminator_loss': 0.70350975, 'train_feature_extractor_loss': 3.9466956, 'train_feature_extractor_1_loss': 24.133556, 'train_generator_PSNR_Y': 6.852005}
+2020-05-18 10:51:48,989 - ISR.train.trainer - DEBUG - Losses at step 1:
+ {'train_d_real_loss': 0.5490504, 'train_d_real_accuracy': 0.735, 'train_d_fake_loss': 1.1989503, 'train_d_fake_accuracy': 0.40328124, 'train_loss': 2.1393447, 'train_generator_loss': 0.36071527, 'train_discriminator_loss': 0.45922515, 'train_feature_extractor_loss': 7.5717297, 'train_feature_extractor_1_loss': 43.682827, 'train_generator_PSNR_Y': 8.696502}
+2020-05-18 10:52:28,793 - ISR.train.trainer - DEBUG - Losses at step 2:
+ {'train_d_real_loss': 0.710306, 'train_d_real_accuracy': 0.7053125, 'train_d_fake_loss': 0.9065205, 'train_d_fake_accuracy': 0.38265625, 'train_loss': 1.8549657, 'train_generator_loss': 0.43909568, 'train_discriminator_loss': 0.51752067, 'train_feature_extractor_loss': 6.2952895, 'train_feature_extractor_1_loss': 38.117447, 'train_generator_PSNR_Y': 6.1456184}
+2020-05-18 10:53:15,227 - ISR.train.trainer - DEBUG - Losses at step 3:
+ {'train_d_real_loss': 0.594636, 'train_d_real_accuracy': 0.60109377, 'train_d_fake_loss': 0.9245527, 'train_d_fake_accuracy': 0.35421875, 'train_loss': 0.96133476, 'train_generator_loss': 0.7233744, 'train_discriminator_loss': 0.61942285, 'train_feature_extractor_loss': 3.3313587, 'train_feature_extractor_1_loss': 19.601187, 'train_generator_PSNR_Y': 3.7831912}
+2020-05-18 10:53:54,652 - ISR.train.trainer - DEBUG - Losses at step 4:
+ {'train_d_real_loss': 0.42977616, 'train_d_real_accuracy': 0.8459375, 'train_d_fake_loss': 0.76497877, 'train_d_fake_accuracy': 0.39890626, 'train_loss': 0.6538346, 'train_generator_loss': 0.20485431, 'train_discriminator_loss': 0.40358457, 'train_feature_extractor_loss': 2.3126693, 'train_feature_extractor_1_loss': 13.28874, 'train_generator_PSNR_Y': 11.891881}
+2020-05-18 10:54:29,822 - ISR.train.trainer - DEBUG - Losses at step 5:
+ {'train_d_real_loss': 0.34290534, 'train_d_real_accuracy': 0.9423438, 'train_d_fake_loss': 0.74587953, 'train_d_fake_accuracy': 0.5467188, 'train_loss': 0.53767455, 'train_generator_loss': 0.34676644, 'train_discriminator_loss': 0.56356126, 'train_feature_extractor_loss': 2.061576, 'train_feature_extractor_1_loss': 10.712468, 'train_generator_PSNR_Y': 9.425605}
+2020-05-18 10:55:04,457 - ISR.train.trainer - DEBUG - Losses at step 6:
+ {'train_d_real_loss': 0.34582427, 'train_d_real_accuracy': 0.9196875, 'train_d_fake_loss': 0.43570024, 'train_d_fake_accuracy': 0.8196875, 'train_loss': 1.8420808, 'train_generator_loss': 0.5480187, 'train_discriminator_loss': 0.42733726, 'train_feature_extractor_loss': 7.036714, 'train_feature_extractor_1_loss': 37.088314, 'train_generator_PSNR_Y': 6.1042867}
+2020-05-18 10:55:38,487 - ISR.train.trainer - DEBUG - Losses at step 7:
+ {'train_d_real_loss': 0.21362709, 'train_d_real_accuracy': 0.9945313, 'train_d_fake_loss': 0.9167944, 'train_d_fake_accuracy': 0.486875, 'train_loss': 0.35299206, 'train_generator_loss': 0.3148181, 'train_discriminator_loss': 1.8152279, 'train_feature_extractor_loss': 0.9264404, 'train_feature_extractor_1_loss': 7.11293, 'train_generator_PSNR_Y': 10.523113}
+2020-05-18 10:56:15,596 - ISR.train.trainer - DEBUG - Losses at step 8:
+ {'train_d_real_loss': 1.4070636, 'train_d_real_accuracy': 0.2165625, 'train_d_fake_loss': 0.49232334, 'train_d_fake_accuracy': 0.78234375, 'train_loss': 1.559172, 'train_generator_loss': 0.23143306, 'train_discriminator_loss': 1.6580163, 'train_feature_extractor_loss': 6.2268786, 'train_feature_extractor_1_loss': 30.810139, 'train_generator_PSNR_Y': 10.224747}
+2020-05-18 10:56:49,144 - ISR.train.trainer - DEBUG - Losses at step 9:
+ {'train_d_real_loss': 0.6325996, 'train_d_real_accuracy': 0.72625, 'train_d_fake_loss': 0.35760567, 'train_d_fake_accuracy': 0.9309375, 'train_loss': 0.33212394, 'train_generator_loss': 0.36180228, 'train_discriminator_loss': 0.4804757, 'train_feature_extractor_loss': 1.1825116, 'train_feature_extractor_1_loss': 6.676292, 'train_generator_PSNR_Y': 10.376628}
+2020-05-18 10:57:21,729 - ISR.train.trainer - DEBUG - Losses at step 10:
+ {'train_d_real_loss': 0.24300133, 'train_d_real_accuracy': 0.99640626, 'train_d_fake_loss': 0.2619326, 'train_d_fake_accuracy': 0.9775, 'train_loss': 1.5197413, 'train_generator_loss': 0.54555154, 'train_discriminator_loss': 0.077201694, 'train_feature_extractor_loss': 5.3750243, 'train_feature_extractor_1_loss': 31.094824, 'train_generator_PSNR_Y': 5.36758}
+2020-05-18 10:57:53,893 - ISR.train.trainer - DEBUG - Losses at step 11:
+ {'train_d_real_loss': 0.688481, 'train_d_real_accuracy': 0.605625, 'train_d_fake_loss': 0.19224112, 'train_d_fake_accuracy': 0.99125, 'train_loss': 0.40901756, 'train_generator_loss': 0.5780446, 'train_discriminator_loss': 0.029956726, 'train_feature_extractor_loss': 1.4213247, 'train_feature_extractor_1_loss': 8.391832, 'train_generator_PSNR_Y': 6.583074}
+2020-05-18 10:57:53,901 - ISR.train.trainer - INFO - Epoch 0 took      433.3s
+2020-05-18 11:01:03,034 - ISR.train.trainer - ERROR - val_PSNR_Y is NOT among the model metrics, removing it.
+2020-05-18 11:01:03,036 - ISR.utils.train_helper - INFO - {'val_loss': 1.0805125642567872, 'val_generator_loss': 0.47696352, 'val_discriminator_loss': 0.03079221, 'val_feature_extractor_loss': 3.9388785, 'val_feature_extractor_1_loss': 21.996405, 'val_generator_PSNR_Y': 7.634407, 'train_d_real_loss': 0.688481, 'train_d_real_accuracy': 0.605625, 'train_d_fake_loss': 0.19224112, 'train_d_fake_accuracy': 0.99125, 'train_loss': 0.40901756, 'train_generator_loss': 0.5780446, 'train_discriminator_loss': 0.029956726, 'train_feature_extractor_loss': 1.4213247, 'train_feature_extractor_1_loss': 8.391832, 'train_generator_PSNR_Y': 6.583074}
+2020-05-18 11:09:23,554 - ISR.utils.train_helper - INFO - 
+Training details:
+2020-05-18 11:09:23,557 - ISR.utils.train_helper - INFO -   training_parameters: 
+2020-05-18 11:09:23,559 - ISR.utils.train_helper - INFO -     lr_train_dir: train/low
+2020-05-18 11:09:23,560 - ISR.utils.train_helper - INFO -     hr_train_dir: train/high
+2020-05-18 11:09:23,561 - ISR.utils.train_helper - INFO -     lr_valid_dir: test/low
+2020-05-18 11:09:23,563 - ISR.utils.train_helper - INFO -     hr_valid_dir: test/high
+2020-05-18 11:09:23,565 - ISR.utils.train_helper - INFO -     loss_weights: {'generator': 0.0, 'feature_extractor': 0.0833, 'discriminator': 0.01}
+2020-05-18 11:09:23,566 - ISR.utils.train_helper - INFO -     log_dirs: {'logs': './logs', 'weights': './weights'}
+2020-05-18 11:09:23,568 - ISR.utils.train_helper - INFO -     fallback_save_every_n_epochs: 2
+2020-05-18 11:09:23,569 - ISR.utils.train_helper - INFO -     dataname: image_dataset
+2020-05-18 11:09:23,571 - ISR.utils.train_helper - INFO -     n_validation: 40
+2020-05-18 11:09:23,572 - ISR.utils.train_helper - INFO -     flatness: {'min': 0.0, 'max': 0.15, 'increase': 0.01, 'increase_frequency': 5}
+2020-05-18 11:09:23,574 - ISR.utils.train_helper - INFO -     learning_rate: {'initial_value': 0.0004, 'decay_factor': 0.5, 'decay_frequency': 30}
+2020-05-18 11:09:23,575 - ISR.utils.train_helper - INFO -     adam_optimizer: {'beta1': 0.9, 'beta2': 0.999, 'epsilon': None}
+2020-05-18 11:09:23,577 - ISR.utils.train_helper - INFO -     losses: {'generator': 'mae', 'discriminator': 'binary_crossentropy', 'feature_extractor': 'mse'}
+2020-05-18 11:09:23,578 - ISR.utils.train_helper - INFO -     metrics: {'generator': <function PSNR_Y at 0x000002C104796840>}
+2020-05-18 11:09:23,580 - ISR.utils.train_helper - INFO -     lr_patch_size: 40
+2020-05-18 11:09:23,582 - ISR.utils.train_helper - INFO -     steps_per_epoch: 11
+2020-05-18 11:09:23,583 - ISR.utils.train_helper - INFO -     batch_size: 16
+2020-05-18 11:09:23,585 - ISR.utils.train_helper - INFO -     starting_epoch: 0
+2020-05-18 11:09:23,586 - ISR.utils.train_helper - INFO -   generator: 
+2020-05-18 11:09:23,588 - ISR.utils.train_helper - INFO -     name: rrdn
+2020-05-18 11:09:23,589 - ISR.utils.train_helper - INFO -     parameters: {'C': 4, 'D': 3, 'G': 64, 'G0': 64, 'T': 10, 'x': 2}
+2020-05-18 11:09:23,591 - ISR.utils.train_helper - INFO -     weights_generator: None
+2020-05-18 11:09:23,592 - ISR.utils.train_helper - INFO -   discriminator: 
+2020-05-18 11:09:23,594 - ISR.utils.train_helper - INFO -     name: srgan-large
+2020-05-18 11:09:23,595 - ISR.utils.train_helper - INFO -     weights_discriminator: None
+2020-05-18 11:09:23,597 - ISR.utils.train_helper - INFO -   feature_extractor: 
+2020-05-18 11:09:23,598 - ISR.utils.train_helper - INFO -     name: vgg19
+2020-05-18 11:09:23,600 - ISR.utils.train_helper - INFO -     layers: [5, 9]
+2020-05-18 11:09:35,360 - ISR.train.trainer - INFO - Epoch 0/1
+2020-05-18 11:09:35,371 - ISR.train.trainer - INFO - Current learning rate: 0.00039999998989515007
+2020-05-18 11:10:10,190 - ISR.train.trainer - DEBUG - Losses at step 0:
+ {'train_d_real_loss': 0.7133557, 'train_d_real_accuracy': 0.598125, 'train_d_fake_loss': 0.9172646, 'train_d_fake_accuracy': 0.315625, 'train_loss': 0.42946088, 'train_generator_loss': 0.8780205, 'train_discriminator_loss': 0.6340805, 'train_feature_extractor_loss': 1.6695884, 'train_feature_extractor_1_loss': 8.489357, 'train_generator_PSNR_Y': 2.4103658}
+2020-05-18 11:10:43,042 - ISR.train.trainer - DEBUG - Losses at step 1:
+ {'train_d_real_loss': 0.45396617, 'train_d_real_accuracy': 0.871875, 'train_d_fake_loss': 0.9476116, 'train_d_fake_accuracy': 0.31828126, 'train_loss': 0.9259629, 'train_generator_loss': 0.6747463, 'train_discriminator_loss': 0.6225586, 'train_feature_extractor_loss': 3.5210752, 'train_feature_extractor_1_loss': 18.561453, 'train_generator_PSNR_Y': 4.228599}
+2020-05-18 11:11:16,234 - ISR.train.trainer - DEBUG - Losses at step 2:
+ {'train_d_real_loss': 0.5789069, 'train_d_real_accuracy': 0.69390625, 'train_d_fake_loss': 0.8291691, 'train_d_fake_accuracy': 0.443125, 'train_loss': 0.66566277, 'train_generator_loss': 0.41744187, 'train_discriminator_loss': 0.4447084, 'train_feature_extractor_loss': 2.2722247, 'train_feature_extractor_1_loss': 13.603301, 'train_generator_PSNR_Y': 8.212737}
+2020-05-18 11:11:48,191 - ISR.train.trainer - DEBUG - Losses at step 3:
+ {'train_d_real_loss': 0.49933532, 'train_d_real_accuracy': 0.6809375, 'train_d_fake_loss': 0.63356924, 'train_d_fake_accuracy': 0.62140626, 'train_loss': 0.8976071, 'train_generator_loss': 0.62948096, 'train_discriminator_loss': 0.26553077, 'train_feature_extractor_loss': 2.8775892, 'train_feature_extractor_1_loss': 18.609848, 'train_generator_PSNR_Y': 5.4041586}
+2020-05-18 11:12:20,139 - ISR.train.trainer - DEBUG - Losses at step 4:
+ {'train_d_real_loss': 0.208708, 'train_d_real_accuracy': 0.95484376, 'train_d_fake_loss': 0.33666024, 'train_d_fake_accuracy': 0.86328125, 'train_loss': 0.82046926, 'train_generator_loss': 0.6526193, 'train_discriminator_loss': 0.6040725, 'train_feature_extractor_loss': 2.7023225, 'train_feature_extractor_1_loss': 16.851784, 'train_generator_PSNR_Y': 4.7739415}
+2020-05-18 11:12:52,227 - ISR.train.trainer - DEBUG - Losses at step 5:
+ {'train_d_real_loss': 0.2572529, 'train_d_real_accuracy': 0.9690625, 'train_d_fake_loss': 0.1851962, 'train_d_fake_accuracy': 0.9896875, 'train_loss': 1.2352598, 'train_generator_loss': 0.46558478, 'train_discriminator_loss': 0.6643924, 'train_feature_extractor_loss': 4.249852, 'train_feature_extractor_1_loss': 25.248726, 'train_generator_PSNR_Y': 6.9914503}
+2020-05-18 11:13:28,406 - ISR.train.trainer - DEBUG - Losses at step 6:
+ {'train_d_real_loss': 0.22005491, 'train_d_real_accuracy': 0.98375, 'train_d_fake_loss': 0.24786937, 'train_d_fake_accuracy': 0.9271875, 'train_loss': 1.0351087, 'train_generator_loss': 0.79289633, 'train_discriminator_loss': 0.25784463, 'train_feature_extractor_loss': 3.9428809, 'train_feature_extractor_1_loss': 20.847761, 'train_generator_PSNR_Y': 3.277384}
+2020-05-18 11:14:06,207 - ISR.train.trainer - DEBUG - Losses at step 7:
+ {'train_d_real_loss': 0.20429268, 'train_d_real_accuracy': 0.975, 'train_d_fake_loss': 0.14132774, 'train_d_fake_accuracy': 0.99859375, 'train_loss': 1.1860653, 'train_generator_loss': 0.4359883, 'train_discriminator_loss': 0.28138486, 'train_feature_extractor_loss': 4.144873, 'train_feature_extractor_1_loss': 24.264524, 'train_generator_PSNR_Y': 7.5653152}
+2020-05-18 11:14:41,169 - ISR.train.trainer - DEBUG - Losses at step 8:
+ {'train_d_real_loss': 0.21496356, 'train_d_real_accuracy': 0.9815625, 'train_d_fake_loss': 0.10821559, 'train_d_fake_accuracy': 0.9971875, 'train_loss': 1.9260792, 'train_generator_loss': 0.54692286, 'train_discriminator_loss': 0.30639422, 'train_feature_extractor_loss': 7.0603237, 'train_feature_extractor_1_loss': 39.110508, 'train_generator_PSNR_Y': 5.8725696}
+2020-05-18 11:15:15,822 - ISR.train.trainer - DEBUG - Losses at step 9:
+ {'train_d_real_loss': 0.05312853, 'train_d_real_accuracy': 1.0, 'train_d_fake_loss': 0.035036784, 'train_d_fake_accuracy': 1.0, 'train_loss': 0.7250087, 'train_generator_loss': 0.71978605, 'train_discriminator_loss': 0.336145, 'train_feature_extractor_loss': 2.6297607, 'train_feature_extractor_1_loss': 14.696705, 'train_generator_PSNR_Y': 3.8178928}
+2020-05-18 11:15:50,035 - ISR.train.trainer - DEBUG - Losses at step 10:
+ {'train_d_real_loss': 0.021948723, 'train_d_real_accuracy': 1.0, 'train_d_fake_loss': 0.035589155, 'train_d_fake_accuracy': 1.0, 'train_loss': 0.39084655, 'train_generator_loss': 0.7498265, 'train_discriminator_loss': 0.1667503, 'train_feature_extractor_loss': 1.543367, 'train_feature_extractor_1_loss': 7.800668, 'train_generator_PSNR_Y': 3.6057148}
+2020-05-18 11:15:50,042 - ISR.train.trainer - INFO - Epoch 0 took      374.7s
+2020-05-18 11:19:09,523 - ISR.train.trainer - ERROR - val_PSNR_Y is NOT among the model metrics, removing it.
+2020-05-18 11:19:09,525 - ISR.utils.train_helper - INFO - {'val_loss': 1.0652723155915738, 'val_generator_loss': 0.48952022, 'val_discriminator_loss': 0.16213919, 'val_feature_extractor_loss': 3.8961563, 'val_feature_extractor_1_loss': 21.64168, 'val_generator_PSNR_Y': 7.0850306, 'train_d_real_loss': 0.021948723, 'train_d_real_accuracy': 1.0, 'train_d_fake_loss': 0.035589155, 'train_d_fake_accuracy': 1.0, 'train_loss': 0.39084655, 'train_generator_loss': 0.7498265, 'train_discriminator_loss': 0.1667503, 'train_feature_extractor_loss': 1.543367, 'train_feature_extractor_1_loss': 7.800668, 'train_generator_PSNR_Y': 3.6057148}
